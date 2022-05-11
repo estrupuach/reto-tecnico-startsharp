@@ -25,7 +25,6 @@ public class CreateMeetingStepDefinition {
     @When("^he create the new meeting$")
     public void heCreateTheNewMeeting(List<MeetingModel> meetingModelList) throws Exception {
         OnStage.theActorCalled("Admin").attemptsTo(
-                //Business.createBusinessUnit(meetingModelList));
                 Meeting.createMeetingAssociateBusiness(meetingModelList));
     }
 
