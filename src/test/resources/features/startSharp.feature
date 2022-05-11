@@ -7,7 +7,7 @@
       |strUsername|strPassword|
       |  admin    |serenity   |
 
-#    @createBusinessUnit
+    #@createBusinessUnit
     Scenario Outline: sign in startSharp and create business unit
       When he create the business unit
         | strNameBusiness   | strParentUnit   |
@@ -20,7 +20,7 @@
         | strNameBusiness | strParentUnit |
         | business-testing   | Administration  |
 
-#    @createMeeting
+  # @createMeeting
     Scenario Outline: Create new meeting that asociate with the new business Unit
       When he create the new meeting
         | strNameBusiness   | strParentUnit   | NameMeeting   | NumberMeeting   | type     | fechaInicio   | hourStart   | endDate    | endHour   | location   | organizedBy  | reporter   | attendee     |
