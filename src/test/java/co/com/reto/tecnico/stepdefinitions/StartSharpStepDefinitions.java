@@ -2,11 +2,9 @@ package co.com.reto.tecnico.stepdefinitions;
 
 import co.com.reto.tecnico.model.LoginModel;
 import co.com.reto.tecnico.model.MeetingModel;
-import co.com.reto.tecnico.questions.Answer;
 import co.com.reto.tecnico.questions.AnswerBusinnesUnit;
 import co.com.reto.tecnico.tasks.Business;
 import co.com.reto.tecnico.tasks.Login;
-import co.com.reto.tecnico.tasks.Meeting;
 import co.com.reto.tecnico.tasks.StartPage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -43,12 +41,4 @@ public class StartSharpStepDefinitions {
     public void newMeetingIsCreated(List<MeetingModel> meetingModelList) throws Exception {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(AnswerBusinnesUnit.toThe(meetingModelList)));
     }
-
-
-    /*@When("^he create the business unit and asociate with new meeting$")
-    public void heCreateTheBusinessUnitAndAsociateWithNewMeeting(List<MeetingModel> meetingModelList) throws Exception {
-        OnStage.theActorCalled("Admin").attemptsTo(
-                Business.createBusinessUnit(meetingModelList)
-        );
-    }*/
 }
