@@ -18,7 +18,7 @@
 
       Examples:
         | strNameBusiness | strParentUnit |
-        | business-testt   | Administration  |
+        | business-prueba1   | Administration  |
 
     @createMeeting
     Scenario Outline: Create new meeting that asociate with the new business Unit
@@ -31,6 +31,6 @@
 
       Examples:
         | strNameBusiness | strParentUnit  | NameMeeting | NumberMeeting | type     | fechaInicio | hourStart | endDate    | endHour | location | organizedBy  | reporter   | attendee     |
-        | business-testt   | Administration | MeetingTestt | abc123asd     | Customer | 05/10/2022  | 14:20     | 05/10/2022 | 15:40   | HQ-01    | Brian Morgan | Jose Hayes | Alexis Lopez |
+        | business-prueba1   | Administration | MeetingTestt | abc123asd     | Customer | 05/10/2022  | 14:20     | 05/10/2022 | 15:40   | HQ-01    | Brian Morgan | Jose Hayes | Alexis Lopez |
 
 

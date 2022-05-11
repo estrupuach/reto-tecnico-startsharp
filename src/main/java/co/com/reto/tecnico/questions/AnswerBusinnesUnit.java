@@ -2,9 +2,9 @@ package co.com.reto.tecnico.questions;
 
 import co.com.reto.tecnico.model.MeetingModel;
 import co.com.reto.tecnico.userinterface.SearchBusinessUnitPage;
-import co.com.reto.tecnico.userinterface.SearchMeetingPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.questions.Text;
 
 import java.util.List;
@@ -22,9 +22,15 @@ public class AnswerBusinnesUnit implements Question<Boolean>{
 
     @Override
     public Boolean answeredBy(Actor actor) {
+        actor.attemptsTo(Enter.theValue(nameBusinessUnit)
+                .into(SearchBusinessUnitPage.INPUT_NAME_BUSINESS_UNIT));
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         String nameQueryBusiness = Text.of(SearchBusinessUnitPage.NAME_BUSINESS_UNIT).viewedBy(actor).asString();
-        //System.out.println("valor enviado desde datadrive: "+nameBusinessUnit);
-        //System.out.println("valor tomado desde page: "+nameQueryBusiness);
         if(nameBusinessUnit.equals(nameQueryBusiness)){
             return true;
         }else {

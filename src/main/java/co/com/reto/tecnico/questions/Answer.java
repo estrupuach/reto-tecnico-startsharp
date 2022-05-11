@@ -4,7 +4,7 @@ import co.com.reto.tecnico.model.MeetingModel;
 import co.com.reto.tecnico.userinterface.SearchMeetingPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.questions.Text;
 
 import java.util.List;
@@ -22,11 +22,15 @@ public class Answer implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        //actor.attemptsTo(Click.on());
+        actor.attemptsTo(Enter.theValue(nameMeeting).into(SearchMeetingPage.INPUT_NAME_MEETING));
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         String nameQueryMeeting = Text.of(SearchMeetingPage.NAME_MEETING).viewedBy(actor).asString();
-        //System.out.println("valor enviado desde datadrive: "+nameMeeting);
-        //System.out.println("valor tomado desde page: "+nameQueryMeeting);
 
         if(nameMeeting.equals(nameQueryMeeting)){
             return true;
