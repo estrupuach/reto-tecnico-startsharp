@@ -12,15 +12,15 @@ import org.openqa.selenium.Keys;
 
 import java.util.List;
 
-public class Business implements Task {
+public class CreateBU implements Task {
     List<MeetingModel> meetingModelList;
 
-    public Business(List<MeetingModel> meetingModelList) {
+    public CreateBU(List<MeetingModel> meetingModelList) {
         this.meetingModelList = meetingModelList;
     }
 
-    public static Business createBusinessUnit(List<MeetingModel> meetingModelList) {
-        return Tasks.instrumented(Business.class, meetingModelList);
+    public static CreateBU theBusinessUnitWithThe(List<MeetingModel> meetingModelList) {
+        return Tasks.instrumented(CreateBU.class, meetingModelList);
     }
 
     @Override

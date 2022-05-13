@@ -5,15 +5,15 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-public class AnswerLanguage implements Question<Boolean> {
+public class Language implements Question<Boolean> {
     private String question;
 
-    public AnswerLanguage(String question) {
+    public Language(String question) {
         this.question = question;
     }
 
-    public static AnswerLanguage toThe(String questions) {
-        return new AnswerLanguage(questions);
+    public static Language toThe(String questions) {
+        return new Language(questions);
     }
 
     @Override
