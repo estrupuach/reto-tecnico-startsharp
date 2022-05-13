@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 public class LanguagePage extends PageObject {
     public static final Target LIST_LANGUAGE = Target.the("deployment language list")
             . located(By.xpath("(//a[@title='switch language'])[1]"));
-    public static final Target LANGUAGE_PORTUGUESE = Target.the("")
+    public static final Target LANGUAGE_PORTUGUESE = Target.the("Option that change language to portuguese")
             . located(By.xpath("(//a[text()='Portuguese'])[1]"));
-    public static final Target ITEM_PANEL = Target.the("")
+    public static final Target ITEM_PANEL = Target.the("visible text from panel")
             . located(By.xpath("(//span[text()='Painel de instrumentos'])"));
 }

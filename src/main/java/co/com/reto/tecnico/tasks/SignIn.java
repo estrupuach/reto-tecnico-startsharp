@@ -10,15 +10,15 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 import java.util.List;
 
-public class Login implements Task {
+public class SignIn implements Task {
     private List<LoginModel> loginModelList;
 
-    public Login(List<LoginModel> loginModelList) {
+    public SignIn(List<LoginModel> loginModelList) {
         this.loginModelList = loginModelList;
     }
 
-    public static Login StartSharpPage(List<LoginModel> loginModelList) {
-        return Tasks.instrumented(Login.class, loginModelList);
+    public static SignIn withTheData(List<LoginModel> loginModelList) {
+        return Tasks.instrumented(SignIn.class, loginModelList);
     }
 
     @Override

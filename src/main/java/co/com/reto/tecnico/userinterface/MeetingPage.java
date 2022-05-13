@@ -22,11 +22,11 @@ public class MeetingPage extends PageObject {
     public static final Target INPUT_DATE_START = Target.the("write start day of meeting").
             located(By.id("Serenity_Pro_Meeting_MeetingDialog10_StartDate"));
     public static final Target SELECT_HOUR_START =Target.the("select start hour of meeting").
-            located(By.xpath("/html/body/main/section/div[2]/div[2]/div[1]/div[2]/form/div/div/div/div/div[4]/select"));
+            located(By.xpath("(//select[@class='editor s-DateTimeEditor time'])[1]"));
     public static final Target INPUT_END_DATE = Target.the("write end day of meeting").
             located(By.id("Serenity_Pro_Meeting_MeetingDialog10_EndDate"));
     public static final Target SELECT_END_HOUR = Target.the("select end hour of meeting").
-            located(By.xpath("//*[@id='Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid']/div/div/div[5]/select"));
+            located(By.xpath("//select[@class='editor s-DateTimeEditor time']"));
     public static final Target LIST_LOCATION = Target.the("deployment the diferents location")
             .located(By.id("s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId"));
     public static final Target INPUT_LOCATION = Target.the("write location meeting")

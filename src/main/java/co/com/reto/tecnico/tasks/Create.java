@@ -13,15 +13,15 @@ import org.openqa.selenium.Keys;
 
 import java.util.List;
 
-public class Meeting implements Task {
+public class Create implements Task {
     private List<MeetingModel> meetingModelList;
 
-    public Meeting(List<MeetingModel> meetingModelList) {
+    public Create(List<MeetingModel> meetingModelList) {
         this.meetingModelList = meetingModelList;
     }
 
-    public static Meeting createMeetingAssociateBusiness(List<MeetingModel> meetingModelList) {
-        return Tasks.instrumented(Meeting.class, meetingModelList);
+    public static Create theMeetingWithTheData(List<MeetingModel> meetingModelList) {
+        return Tasks.instrumented(Create.class, meetingModelList);
     }
 
     @Override

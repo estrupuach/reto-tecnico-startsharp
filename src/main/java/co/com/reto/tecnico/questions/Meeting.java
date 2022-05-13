@@ -9,15 +9,15 @@ import net.serenitybdd.screenplay.questions.Text;
 
 import java.util.List;
 
-public class Answer implements Question<Boolean> {
+public class Meeting implements Question<Boolean> {
     private String nameMeeting;
 
-    public Answer(String nameMeeting) {
+    public Meeting(String nameMeeting) {
         this.nameMeeting = nameMeeting;
     }
 
-    public static Answer toThe(List<MeetingModel> meetingModelList){
-        return new Answer(meetingModelList.get(0).getNameMeeting());
+    public static Meeting withYour(List<MeetingModel> meetingModelList){
+        return new Meeting(meetingModelList.get(0).getNameMeeting());
     }
 
     @Override
